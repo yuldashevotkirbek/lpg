@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF" />
+
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="A new Flutter project." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="persistent_project" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="msapplication-TileImage" content="favicon.png" />
+
+  <title>poytug_gtk</title>
+  <link rel="manifest" href="manifest.json" />
+
+  <style>
+    html, body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    #loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      z-index: 9999;
+    }
+    
+    @media (max-width: 768px) {
+      html, body {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+
+    .loader {
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top: 6px solid #87ceeb;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Flutter app container */
+    flutter-view {
+      width: 100vw !important;
+      height: 100vh !important;
+      display: block !important;
+    }
+    
+    /* Ensure full screen coverage */
+    #main {
+      width: 100vw !important;
+      height: 100vh !important;
+    }
+  </style>
+</head>
+<body>
+<!-- Loader Container -->
+<div id="loading-container">
+  <div class="loader"></div>
+</div>
+
+<script src="flutter.js" defer></script>
+
+<script>
+  var scriptLoaded = false;
+
+  function loadMainDartJs() {
+    if (scriptLoaded) return;
+    scriptLoaded = true;
+    var scriptTag = document.createElement("script");
+    scriptTag.src = "main.dart.js";
+    scriptTag.type = "application/javascript";
+    document.body.appendChild(scriptTag);
+  }
+
+  function removeLoader() {
+    var loader = document.getElementById("loading-container");
+    if (loader) {
+      loader.style.display = "none";
+    }
+  }
+
+  window.addEventListener("flutter-first-frame", function () {
+    removeLoader();
+    window.parent.postMessage({ type: "LOADING_COMPLETED", }, "*");
+  });
+
+  loadMainDartJs();
+</script>
+
+<script>
+  // Navigation tracking
+  (function (history) {
+    const pushState = history.pushState;
+    const replaceState = history.replaceState;
+
+    function logNavigation(method, url) {
+      // console.log(`[IN FLUTTER APP] - Navigated (${method}): ${url}`);
+      window.parent.postMessage({ type: "NAVIGATION", method, url }, "*");
+    }
+
+    history.pushState = function (state, title, url) {
+      logNavigation("pushState", url);
+      return pushState.apply(history, arguments);
+    };
+
+    history.replaceState = function (state, title, url) {
+      logNavigation("replaceState", url);
+      return replaceState.apply(history, arguments);
+    };
+
+    window.addEventListener("popstate", function (event) {
+      logNavigation("popstate", location.href);
+    });
+  })(window.history);
+</script>
+
+<!-- Plugin initialization code will be injected into flutter_plugins.js -->
+<script src="flutter_plugins.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "19873536274",
+    "project_id": "poytug-gtk",
+    "storage_bucket": "poytug-gtk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19873536274:android:844eced5cd03e9f9f2bbcb",
+        "android_client_info": {
+          "package_name": "com.example.poytug_gtk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFETAN_syHH5L7Py611sFjX_LJPUIkM_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
