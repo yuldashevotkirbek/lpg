@@ -72,7 +72,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                   color: Theme.of(context)
                       .colorScheme
                       .outline
-                      .withValues(alpha: 0.3),
+                      .withOpacity(0.3),
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
@@ -134,8 +134,8 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
         padding: EdgeInsets.symmetric(vertical: 2.h),
         decoration: BoxDecoration(
           color: isDestructive
-              ? Theme.of(context).colorScheme.error.withValues(alpha: 0.1)
-              : Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+              ? Theme.of(context).colorScheme.error.withOpacity(0.1)
+              : Theme.of(context).colorScheme.primary.withOpacity(0.1),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -280,7 +280,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
           end: Alignment.bottomRight,
           colors: [
             Theme.of(context).colorScheme.primary,
-            Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
+            Theme.of(context).colorScheme.primary.withOpacity(0.8),
           ],
         ),
       ),
@@ -312,7 +312,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                     color: Theme.of(context)
                         .colorScheme
                         .onPrimary
-                        .withValues(alpha: 0.1),
+                        .withOpacity(0.1),
                     child: CustomIconWidget(
                       iconName: 'person',
                       color: Theme.of(context).colorScheme.onPrimary,
@@ -370,7 +370,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                         color: Theme.of(context)
                             .colorScheme
                             .onPrimary
-                            .withValues(alpha: 0.5),
+                            .withOpacity(0.5),
                       ),
                     ),
                     focusedBorder: UnderlineInputBorder(
@@ -414,7 +414,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                     color: Theme.of(context)
                         .colorScheme
                         .onPrimary
-                        .withValues(alpha: 0.9),
+                        .withOpacity(0.9),
                   ),
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(
@@ -427,7 +427,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                         color: Theme.of(context)
                             .colorScheme
                             .onPrimary
-                            .withValues(alpha: 0.5),
+                            .withOpacity(0.5),
                       ),
                     ),
                     focusedBorder: UnderlineInputBorder(
@@ -447,7 +447,7 @@ class _ProfileHeaderWidgetState extends State<ProfileHeaderWidget> {
                     color: Theme.of(context)
                         .colorScheme
                         .onPrimary
-                        .withValues(alpha: 0.9),
+                        .withOpacity(0.9),
                   ),
                   textAlign: TextAlign.center,
                 ),

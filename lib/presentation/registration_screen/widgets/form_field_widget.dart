@@ -131,7 +131,7 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
                 color: _hasError
                     ? AppTheme.lightTheme.colorScheme.error
                     : AppTheme.lightTheme.colorScheme.outline
-                    .withValues(alpha: 0.3),
+                    .withOpacity(0.3),
                 width: 1.5,
               ),
             ),
@@ -143,7 +143,7 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
                     : _isValid
                     ? AppTheme.getSuccessColor(true)
                     : AppTheme.lightTheme.colorScheme.outline
-                    .withValues(alpha: 0.3),
+                    .withOpacity(0.3),
                 width: 1.5,
               ),
             ),

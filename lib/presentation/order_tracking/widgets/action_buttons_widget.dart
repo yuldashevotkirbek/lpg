@@ -32,7 +32,7 @@ class ActionButtonsWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+            color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -221,9 +221,9 @@ class ActionButtonsWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(3.w),
       decoration: BoxDecoration(
-        color: colorScheme.error.withValues(alpha: 0.05),
+        color: colorScheme.error.withOpacity(0.05),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: colorScheme.error.withValues(alpha: 0.2)),
+        border: Border.all(color: colorScheme.error.withOpacity(0.2)),
       ),
       child: Row(
         children: [
@@ -248,7 +248,7 @@ class ActionButtonsWidget extends StatelessWidget {
                 Text(
                   'Muammo yuzaga kelsa: +998 71 123 45 67',
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: colorScheme.onSurface.withValues(alpha: 0.7),
+                    color: colorScheme.onSurface.withOpacity(0.7),
                   ),
                 ),
               ],
@@ -317,7 +317,7 @@ class ActionButtonsWidget extends StatelessWidget {
           content: Text(
             'Haqiqatan ham bu buyurtmani bekor qilmoqchimisiz? Bu amalni qaytarib bo\'lmaydi.',
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.8),
+              color: colorScheme.onSurface.withOpacity(0.8),
             ),
           ),
           actions: [

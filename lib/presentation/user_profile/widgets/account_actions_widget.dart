@@ -60,11 +60,11 @@ class AccountActionsWidget extends StatelessWidget {
             height: 10.w,
             decoration: BoxDecoration(
               color: isDestructive
-                  ? Theme.of(context).colorScheme.error.withValues(alpha: 0.1)
+                  ? Theme.of(context).colorScheme.error.withOpacity(0.1)
                   : Theme.of(context)
                   .colorScheme
                   .primary
-                  .withValues(alpha: 0.1),
+                  .withOpacity(0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: CustomIconWidget(
@@ -87,7 +87,7 @@ class AccountActionsWidget extends StatelessWidget {
           trailing: CustomIconWidget(
             iconName: 'arrow_forward_ios',
             color:
-            Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
+            Theme.of(context).colorScheme.onSurface.withOpacity(0.4),
             size: 16,
           ),
           onTap: onTap,
@@ -96,7 +96,7 @@ class AccountActionsWidget extends StatelessWidget {
         if (showDivider)
           Divider(
             height: 1,
-            color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
+            color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
           ),
       ],
     );

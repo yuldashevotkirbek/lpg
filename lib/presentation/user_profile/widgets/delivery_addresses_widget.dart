@@ -236,7 +236,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
+          color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
         ),
       ),
       child: Column(
@@ -244,7 +244,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
           CustomIconWidget(
             iconName: 'location_off',
             color:
-            Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
+            Theme.of(context).colorScheme.onSurface.withOpacity(0.4),
             size: 48,
           ),
           SizedBox(height: 2.h),
@@ -254,7 +254,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
               color: Theme.of(context)
                   .colorScheme
                   .onSurface
-                  .withValues(alpha: 0.6),
+                  .withOpacity(0.6),
             ),
           ),
           SizedBox(height: 1.h),
@@ -264,7 +264,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
               color: Theme.of(context)
                   .colorScheme
                   .onSurface
-                  .withValues(alpha: 0.4),
+                  .withOpacity(0.4),
             ),
             textAlign: TextAlign.center,
           ),
@@ -305,7 +305,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
           border: Border.all(
             color: (address['isPrimary'] as bool)
                 ? Theme.of(context).colorScheme.primary
-                : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
+                : Theme.of(context).colorScheme.outline.withOpacity(0.2),
             width: (address['isPrimary'] as bool) ? 2 : 1,
           ),
         ),
@@ -363,10 +363,10 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
             Text(
               address['address'] as String,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context)
-                    .colorScheme
-                    .onSurface
-                    .withValues(alpha: 0.8),
+            color: Theme.of(context)
+                .colorScheme
+                .onSurface
+                .withOpacity(0.8),
               ),
             ),
             SizedBox(height: 1.h),
@@ -377,7 +377,7 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
                   color: Theme.of(context)
                       .colorScheme
                       .onSurface
-                      .withValues(alpha: 0.6),
+                    .withOpacity(0.6),
                   size: 16,
                 ),
                 SizedBox(width: 2.w),
@@ -387,7 +387,8 @@ class _DeliveryAddressesWidgetState extends State<DeliveryAddressesWidget> {
                     color: Theme.of(context)
                         .colorScheme
                         .onSurface
-                        .withValues(alpha: 0.6),
+                      .withOpacity(0.6),
+                        .withOpacity(0.6),
                   ),
                 ),
               ],

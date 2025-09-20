@@ -265,7 +265,7 @@ class _ProfilePhotoWidgetState extends State<ProfilePhotoWidget> {
                 size: 28,
               ),
               style: IconButton.styleFrom(
-                backgroundColor: Colors.black.withValues(alpha: 0.5),
+                backgroundColor: Colors.black.withOpacity(0.5),
               ),
             ),
           ),
@@ -314,7 +314,7 @@ class _ProfilePhotoWidgetState extends State<ProfilePhotoWidget> {
           color: AppTheme.lightTheme.colorScheme.surface,
           border: Border.all(
             color:
-            AppTheme.lightTheme.colorScheme.outline.withValues(alpha: 0.3),
+            AppTheme.lightTheme.colorScheme.outline.withOpacity(0.3),
             width: 2,
           ),
         ),
@@ -382,7 +382,7 @@ class _ProfilePhotoWidgetState extends State<ProfilePhotoWidget> {
           'Profil rasmi (ixtiyoriy)',
           style: AppTheme.lightTheme.textTheme.bodyMedium?.copyWith(
             color: AppTheme.lightTheme.colorScheme.onSurface
-                .withValues(alpha: 0.7),
+                .withOpacity(0.7),
           ),
         ),
       ],

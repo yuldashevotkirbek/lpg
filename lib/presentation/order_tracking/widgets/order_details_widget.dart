@@ -30,7 +30,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+            color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -63,7 +63,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
             Container(
               padding: EdgeInsets.all(2.w),
               decoration: BoxDecoration(
-                color: colorScheme.primary.withValues(alpha: 0.1),
+                color: colorScheme.primary.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: CustomIconWidget(
@@ -88,7 +88,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                   Text(
                     'Buyurtma #${widget.orderData['orderNumber'] ?? 'N/A'}',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                 ],
@@ -99,7 +99,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
               duration: const Duration(milliseconds: 200),
               child: CustomIconWidget(
                 iconName: 'keyboard_arrow_down',
-                color: colorScheme.onSurface.withValues(alpha: 0.6),
+                color: colorScheme.onSurface.withOpacity(0.6),
                 size: 6.w,
               ),
             ),
@@ -118,7 +118,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Divider(color: colorScheme.outline.withValues(alpha: 0.2)),
+          Divider(color: colorScheme.outline.withOpacity(0.2)),
           SizedBox(height: 2.h),
           _buildOrderItems(context),
           SizedBox(height: 3.h),
@@ -160,9 +160,9 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
       margin: EdgeInsets.only(bottom: 2.h),
       padding: EdgeInsets.all(3.w),
       decoration: BoxDecoration(
-        color: colorScheme.primary.withValues(alpha: 0.05),
+        color: colorScheme.primary.withOpacity(0.05),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: colorScheme.primary.withValues(alpha: 0.1)),
+        border: Border.all(color: colorScheme.primary.withOpacity(0.1)),
       ),
       child: Row(
         children: [
@@ -183,7 +183,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                 fit: BoxFit.cover,
               )
                   : Container(
-                color: colorScheme.primary.withValues(alpha: 0.1),
+                color: colorScheme.primary.withOpacity(0.1),
                 child: CustomIconWidget(
                   iconName: 'local_gas_station',
                   color: colorScheme.primary,
@@ -208,7 +208,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                 Text(
                   '${item['quantity'] ?? 1} x ${item['price'] ?? '0'} so\'m',
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: colorScheme.onSurface.withValues(alpha: 0.6),
+                    color: colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
               ],
@@ -244,10 +244,10 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
         Container(
           padding: EdgeInsets.all(3.w),
           decoration: BoxDecoration(
-            color: colorScheme.secondary.withValues(alpha: 0.05),
+            color: colorScheme.secondary.withOpacity(0.05),
             borderRadius: BorderRadius.circular(8),
             border:
-            Border.all(color: colorScheme.secondary.withValues(alpha: 0.2)),
+            Border.all(color: colorScheme.secondary.withOpacity(0.2)),
           ),
           child: Row(
             children: [
@@ -276,7 +276,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                       Text(
                         '${widget.orderData['deliveryAddress']['city']}, ${widget.orderData['deliveryAddress']['region'] ?? 'Toshkent'}',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurface.withValues(alpha: 0.6),
+                color: colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                     ],
@@ -308,10 +308,10 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
         Container(
           padding: EdgeInsets.all(3.w),
           decoration: BoxDecoration(
-            color: colorScheme.primary.withValues(alpha: 0.05),
+            color: colorScheme.primary.withOpacity(0.05),
             borderRadius: BorderRadius.circular(8),
             border:
-            Border.all(color: colorScheme.primary.withValues(alpha: 0.2)),
+            Border.all(color: colorScheme.primary.withOpacity(0.2)),
           ),
           child: Column(
             children: [
@@ -321,7 +321,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
               _buildSummaryRow(context, 'Yetkazib berish',
                   '${widget.orderData['deliveryFee'] ?? 0} so\'m'),
               SizedBox(height: 1.h),
-              Divider(color: colorScheme.outline.withValues(alpha: 0.2)),
+              Divider(color: colorScheme.outline.withOpacity(0.2)),
               SizedBox(height: 1.h),
               _buildSummaryRow(
                 context,
@@ -350,7 +350,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
             fontWeight: isTotal ? FontWeight.w600 : FontWeight.w400,
             color: isTotal
                 ? colorScheme.onSurface
-                : colorScheme.onSurface.withValues(alpha: 0.7),
+                : colorScheme.onSurface.withOpacity(0.7),
           ),
         ),
         Text(

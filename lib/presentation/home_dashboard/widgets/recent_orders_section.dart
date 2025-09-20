@@ -82,7 +82,7 @@ class RecentOrdersSection extends StatelessWidget {
       child: Material(
         elevation: 1,
         borderRadius: BorderRadius.circular(12),
-        shadowColor: colorScheme.shadow.withValues(alpha: 0.05),
+        shadowColor: colorScheme.shadow.withOpacity(0.05),
         child: InkWell(
           onTap: () {
             HapticFeedback.lightImpact();
@@ -99,7 +99,7 @@ class RecentOrdersSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               color: colorScheme.surface,
               border: Border.all(
-                color: colorScheme.outline.withValues(alpha: 0.1),
+                color: colorScheme.outline.withOpacity(0.1),
                 width: 1,
               ),
             ),
@@ -112,7 +112,7 @@ class RecentOrdersSection extends StatelessWidget {
                       padding: EdgeInsets.all(2.w),
                       decoration: BoxDecoration(
                         color: _getStatusColor(order["status"] as String)
-                            .withValues(alpha: 0.1),
+                            .withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: CustomIconWidget(
@@ -139,7 +139,7 @@ class RecentOrdersSection extends StatelessWidget {
                             order["date"] as String,
                             style: theme.textTheme.bodySmall?.copyWith(
                               color:
-                              colorScheme.onSurface.withValues(alpha: 0.6),
+                              colorScheme.onSurface.withOpacity(0.6),
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -152,7 +152,7 @@ class RecentOrdersSection extends StatelessWidget {
                           horizontal: 2.w, vertical: 0.5.h),
                       decoration: BoxDecoration(
                         color: _getStatusColor(order["status"] as String)
-                            .withValues(alpha: 0.1),
+                            .withOpacity(0.1),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -185,7 +185,7 @@ class RecentOrdersSection extends StatelessWidget {
                             'Miqdor: ${order["quantity"]}',
                             style: theme.textTheme.bodySmall?.copyWith(
                               color:
-                              colorScheme.onSurface.withValues(alpha: 0.6),
+                              colorScheme.onSurface.withOpacity(0.6),
                             ),
                           ),
                         ],
@@ -267,7 +267,7 @@ class RecentOrdersSection extends StatelessWidget {
         color: colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: colorScheme.outline.withValues(alpha: 0.1),
+          color: colorScheme.outline.withOpacity(0.1),
           width: 1,
         ),
       ),
@@ -275,7 +275,7 @@ class RecentOrdersSection extends StatelessWidget {
         children: [
           CustomIconWidget(
             iconName: 'receipt_long_outlined',
-            color: colorScheme.primary.withValues(alpha: 0.6),
+            color: colorScheme.primary.withOpacity(0.6),
             size: 48,
           ),
           SizedBox(height: 2.h),
@@ -290,7 +290,7 @@ class RecentOrdersSection extends StatelessWidget {
           Text(
             'Birinchi buyurtmangizni bering va bizning xizmatimizdan foydalaning',
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.7),
+              color: colorScheme.onSurface.withOpacity(0.7),
             ),
             textAlign: TextAlign.center,
           ),
@@ -324,7 +324,7 @@ class RecentOrdersSection extends StatelessWidget {
               width: 12.w,
               height: 0.5.h,
               decoration: BoxDecoration(
-                color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                color: theme.colorScheme.outline.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),

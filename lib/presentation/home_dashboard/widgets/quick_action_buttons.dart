@@ -84,7 +84,7 @@ class QuickActionButtons extends StatelessWidget {
     return Material(
       elevation: 2,
       borderRadius: BorderRadius.circular(12),
-      shadowColor: backgroundColor.withValues(alpha: 0.2),
+      shadowColor: backgroundColor.withOpacity(0.2),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(12),

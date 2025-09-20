@@ -27,7 +27,7 @@ class DeliveryStatusCard extends StatelessWidget {
       child: Material(
         elevation: 2,
         borderRadius: BorderRadius.circular(12),
-        shadowColor: colorScheme.shadow.withValues(alpha: 0.1),
+        shadowColor: colorScheme.shadow.withOpacity(0.1),
         child: InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.circular(12),
@@ -37,7 +37,7 @@ class DeliveryStatusCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               color: colorScheme.surface,
               border: Border.all(
-                color: colorScheme.outline.withValues(alpha: 0.1),
+                color: colorScheme.outline.withOpacity(0.1),
                 width: 1,
               ),
             ),
@@ -51,7 +51,7 @@ class DeliveryStatusCard extends StatelessWidget {
                       decoration: BoxDecoration(
                         color:
                         _getStatusColor(currentOrder!["status"] as String)
-                            .withValues(alpha: 0.1),
+                            .withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: CustomIconWidget(
@@ -90,7 +90,7 @@ class DeliveryStatusCard extends StatelessWidget {
                     ),
                     CustomIconWidget(
                       iconName: 'chevron_right',
-                      color: colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                       size: 20,
                     ),
                   ],
@@ -99,7 +99,7 @@ class DeliveryStatusCard extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(3.w),
                   decoration: BoxDecoration(
-                    color: colorScheme.primary.withValues(alpha: 0.05),
+                    color: colorScheme.primary.withOpacity(0.05),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(
@@ -143,7 +143,7 @@ class DeliveryStatusCard extends StatelessWidget {
         color: colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: colorScheme.outline.withValues(alpha: 0.1),
+          color: colorScheme.outline.withOpacity(0.1),
           width: 1,
         ),
       ),
@@ -151,7 +151,7 @@ class DeliveryStatusCard extends StatelessWidget {
         children: [
           CustomIconWidget(
             iconName: 'local_gas_station_outlined',
-            color: colorScheme.primary.withValues(alpha: 0.6),
+            color: colorScheme.primary.withOpacity(0.6),
             size: 48,
           ),
           SizedBox(height: 2.h),
@@ -166,7 +166,7 @@ class DeliveryStatusCard extends StatelessWidget {
           Text(
             'Birinchi buyurtmangizni bering',
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.7),
+              color: colorScheme.onSurface.withOpacity(0.7),
             ),
             textAlign: TextAlign.center,
           ),

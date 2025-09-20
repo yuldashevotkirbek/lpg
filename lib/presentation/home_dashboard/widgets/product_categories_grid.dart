@@ -78,7 +78,7 @@ class ProductCategoriesGrid extends StatelessWidget {
     return Material(
       elevation: 2,
       borderRadius: BorderRadius.circular(12),
-      shadowColor: colorScheme.shadow.withValues(alpha: 0.1),
+      shadowColor: colorScheme.shadow.withOpacity(0.1),
       child: InkWell(
         onTap: () {
           HapticFeedback.lightImpact();
@@ -90,7 +90,7 @@ class ProductCategoriesGrid extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             color: colorScheme.surface,
             border: Border.all(
-              color: colorScheme.outline.withValues(alpha: 0.1),
+              color: colorScheme.outline.withOpacity(0.1),
               width: 1,
             ),
           ),
@@ -103,7 +103,7 @@ class ProductCategoriesGrid extends StatelessWidget {
                   margin: EdgeInsets.all(3.w),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: colorScheme.primary.withValues(alpha: 0.05),
+                    color: colorScheme.primary.withOpacity(0.05),
                   ),
                   child: category["imageUrl"] != null
                       ? ClipRRect(

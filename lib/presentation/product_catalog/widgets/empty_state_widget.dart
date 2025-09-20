@@ -33,13 +33,13 @@ class EmptyStateWidget extends StatelessWidget {
               width: 40.w,
               height: 40.w,
               decoration: BoxDecoration(
-                color: colorScheme.primary.withValues(alpha: 0.1),
+                color: colorScheme.primary.withOpacity(0.1),
                 shape: BoxShape.circle,
               ),
               child: Center(
                 child: CustomIconWidget(
                   iconName: 'search_off',
-                  color: colorScheme.primary.withValues(alpha: 0.6),
+                  color: colorScheme.primary.withOpacity(0.6),
                   size: 60,
                 ),
               ),
@@ -57,7 +57,7 @@ class EmptyStateWidget extends StatelessWidget {
             Text(
               subtitle,
               style: theme.textTheme.bodyLarge?.copyWith(
-                color: colorScheme.onSurface.withValues(alpha: 0.7),
+                color: colorScheme.onSurface.withOpacity(0.7),
               ),
               textAlign: TextAlign.center,
             ),

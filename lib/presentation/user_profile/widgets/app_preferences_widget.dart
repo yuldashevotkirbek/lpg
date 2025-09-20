@@ -57,7 +57,7 @@ class _AppPreferencesWidgetState extends State<AppPreferencesWidget> {
                   color: Theme.of(context)
                       .colorScheme
                       .outline
-                      .withValues(alpha: 0.3),
+                      .withOpacity(0.3),
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),
@@ -133,7 +133,7 @@ class _AppPreferencesWidgetState extends State<AppPreferencesWidget> {
         width: 10.w,
         height: 10.w,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
           borderRadius: BorderRadius.circular(8),
         ),
         child: CustomIconWidget(
@@ -154,7 +154,7 @@ class _AppPreferencesWidgetState extends State<AppPreferencesWidget> {
           color: Theme.of(context)
               .colorScheme
               .onSurface
-              .withValues(alpha: 0.6),
+              .withOpacity(0.6),
         ),
       ),
       trailing: Switch(
@@ -246,7 +246,7 @@ class _AppPreferencesWidgetState extends State<AppPreferencesWidget> {
                   color: Theme.of(context)
                       .colorScheme
                       .primary
-                      .withValues(alpha: 0.1),
+                      .withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: CustomIconWidget(
@@ -273,7 +273,7 @@ class _AppPreferencesWidgetState extends State<AppPreferencesWidget> {
                 color: Theme.of(context)
                     .colorScheme
                     .onSurface
-                    .withValues(alpha: 0.4),
+                    .withOpacity(0.4),
                 size: 16,
               ),
               onTap: _showLanguageSelector,

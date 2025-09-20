@@ -46,12 +46,12 @@ class ProductCardWidget extends StatelessWidget {
           color: colorScheme.surface,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: colorScheme.outline.withValues(alpha: 0.2),
+            color: colorScheme.outline.withOpacity(0.2),
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: colorScheme.shadow.withValues(alpha: 0.1),
+              color: colorScheme.shadow.withOpacity(0.1),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -101,7 +101,7 @@ class ProductCardWidget extends StatelessWidget {
                 ),
                 if (!isAvailable)
                   Container(
-                    color: Colors.black.withValues(alpha: 0.5),
+                    color: Colors.black.withOpacity(0.5),
                     child: Center(
                       child: Text(
                         'Mavjud emas',
@@ -131,7 +131,7 @@ class ProductCardWidget extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(1.w),
                 decoration: BoxDecoration(
-                  color: colorScheme.surface.withValues(alpha: 0.9),
+                  color: colorScheme.surface.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: CustomIconWidget(
@@ -194,7 +194,7 @@ class ProductCardWidget extends StatelessWidget {
             Text(
               '$tankSize kg',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+                color: theme.colorScheme.onSurface.withOpacity(0.7),
               ),
             ),
           ],
@@ -233,10 +233,10 @@ class ProductCardWidget extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: isAvailable
                   ? colorScheme.primary
-                  : colorScheme.outline.withValues(alpha: 0.3),
+                  : colorScheme.outline.withOpacity(0.3),
               foregroundColor: isAvailable
                   ? colorScheme.onPrimary
-                  : colorScheme.onSurface.withValues(alpha: 0.5),
+                  : colorScheme.onSurface.withOpacity(0.5),
               padding: EdgeInsets.zero,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
@@ -249,7 +249,7 @@ class ProductCardWidget extends StatelessWidget {
                   iconName: 'add_shopping_cart',
                   color: isAvailable
                       ? colorScheme.onPrimary
-                      : colorScheme.onSurface.withValues(alpha: 0.5),
+                      : colorScheme.onSurface.withOpacity(0.5),
                   size: 16,
                 ),
                 SizedBox(width: 1.w),
@@ -287,7 +287,7 @@ class ProductCardWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(
                   context,
-                ).colorScheme.outline.withValues(alpha: 0.3),
+                ).colorScheme.outline.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),

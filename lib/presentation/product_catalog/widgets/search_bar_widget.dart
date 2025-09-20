@@ -50,7 +50,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
         color: colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+            color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -65,7 +65,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 color: colorScheme.surface,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: colorScheme.outline.withValues(alpha: 0.3),
+                  color: colorScheme.outline.withOpacity(0.3),
                   width: 1,
                 ),
               ),
@@ -80,13 +80,13 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 decoration: InputDecoration(
                   hintText: 'Mahsulotlarni qidiring...',
                   hintStyle: theme.textTheme.bodyMedium?.copyWith(
-                    color: colorScheme.onSurface.withValues(alpha: 0.5),
+                    color: colorScheme.onSurface.withOpacity(0.5),
                   ),
                   prefixIcon: Padding(
                     padding: EdgeInsets.all(3.w),
                     child: CustomIconWidget(
                       iconName: 'search',
-                      color: colorScheme.onSurface.withValues(alpha: 0.6),
+              color: colorScheme.onSurface.withOpacity(0.6),
                       size: 20,
                     ),
                   ),
@@ -102,7 +102,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                     },
                     icon: CustomIconWidget(
                       iconName: 'clear',
-                      color: colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                       size: 20,
                     ),
                   )
@@ -128,7 +128,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: colorScheme.primary.withValues(alpha: 0.3),
+                    color: colorScheme.primary.withOpacity(0.3),
                     blurRadius: 4,
                     offset: const Offset(0, 2),
                   ),

@@ -239,7 +239,7 @@ class _TermsWebViewScreenState extends State<TermsWebViewScreen> {
                       'Yuklanmoqda...',
                       style: AppTheme.lightTheme.textTheme.bodyMedium?.copyWith(
                         color: AppTheme.lightTheme.colorScheme.onSurface
-                            .withValues(alpha: 0.7),
+                            .withOpacity(0.7),
                       ),
                     ),
                   ],

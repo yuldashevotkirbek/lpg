@@ -137,7 +137,7 @@ class _PersonalInfoWidgetState extends State<PersonalInfoWidget> {
                       color: Theme.of(context)
                           .colorScheme
                           .onSurface
-                          .withValues(alpha: 0.6),
+                          .withOpacity(0.6),
                       size: 20,
                     ),
                   ),
@@ -163,7 +163,7 @@ class _PersonalInfoWidgetState extends State<PersonalInfoWidget> {
                       color: Theme.of(context)
                           .colorScheme
                           .onSurface
-                          .withValues(alpha: 0.6),
+                          .withOpacity(0.6),
                       size: 20,
                     ),
                   ),
@@ -190,7 +190,7 @@ class _PersonalInfoWidgetState extends State<PersonalInfoWidget> {
                       color: Theme.of(context)
                           .colorScheme
                           .onSurface
-                          .withValues(alpha: 0.6),
+                          .withOpacity(0.6),
                       size: 20,
                     ),
                   ),

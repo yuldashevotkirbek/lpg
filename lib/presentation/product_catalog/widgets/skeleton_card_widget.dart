@@ -44,7 +44,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
             color: colorScheme.surface,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: colorScheme.outline.withValues(alpha: 0.2),
+              color: colorScheme.outline.withOpacity(0.2),
               width: 1,
             ),
           ),
@@ -59,7 +59,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
                   aspectRatio: 1.0,
                   child: Container(
                     color: colorScheme.outline
-                        .withValues(alpha: _animation.value * 0.3),
+                        .withOpacity(_animation.value * 0.3),
                   ),
                 ),
               ),
@@ -75,7 +75,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
                         width: 70.w,
                         decoration: BoxDecoration(
                           color: colorScheme.outline
-                              .withValues(alpha: _animation.value * 0.3),
+                              .withOpacity(_animation.value * 0.3),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -86,7 +86,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
                         width: 40.w,
                         decoration: BoxDecoration(
                           color: colorScheme.outline
-                              .withValues(alpha: _animation.value * 0.3),
+                              .withOpacity(_animation.value * 0.3),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -97,7 +97,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
                         width: 50.w,
                         decoration: BoxDecoration(
                           color: colorScheme.outline
-                              .withValues(alpha: _animation.value * 0.3),
+                              .withOpacity(_animation.value * 0.3),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -108,7 +108,7 @@ class _SkeletonCardWidgetState extends State<SkeletonCardWidget>
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: colorScheme.outline
-                              .withValues(alpha: _animation.value * 0.3),
+                              .withOpacity(_animation.value * 0.3),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
