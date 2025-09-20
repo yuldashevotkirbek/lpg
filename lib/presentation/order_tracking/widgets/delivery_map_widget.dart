@@ -78,7 +78,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+            color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -120,7 +120,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: colorScheme.outline.withValues(alpha: 0.2)),
+          border: Border.all(color: colorScheme.outline.withOpacity(0.2)),
         ),
         child: Stack(
           children: [
@@ -132,7 +132,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
               child: Container(
                 padding: EdgeInsets.all(3.w),
                 decoration: BoxDecoration(
-                  color: colorScheme.surface.withValues(alpha: 0.9),
+                  color: colorScheme.surface.withOpacity(0.9),
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(12),
                     topRight: Radius.circular(12),
@@ -164,7 +164,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
                       child: Container(
                         padding: EdgeInsets.all(1.w),
                         decoration: BoxDecoration(
-                          color: colorScheme.primary.withValues(alpha: 0.1),
+                          color: colorScheme.primary.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: CustomIconWidget(
@@ -186,7 +186,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
               child: Container(
                 padding: EdgeInsets.all(3.w),
                 decoration: BoxDecoration(
-                  color: colorScheme.surface.withValues(alpha: 0.9),
+                  color: colorScheme.surface.withOpacity(0.9),
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(12),
                     bottomRight: Radius.circular(12),
@@ -250,7 +250,7 @@ class _DeliveryMapWidgetState extends State<DeliveryMapWidget> {
                   borderRadius: BorderRadius.circular(8),
                   boxShadow: [
                     BoxShadow(
-                      color: colorScheme.shadow.withValues(alpha: 0.1),
+                      color: colorScheme.shadow.withOpacity(0.1),
                       blurRadius: 4,
                       offset: const Offset(0, 2),
                     ),

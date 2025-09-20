@@ -65,7 +65,7 @@ class _RatingDialogWidgetState extends State<RatingDialogWidget> {
           decoration: BoxDecoration(
             color:
             AppTheme.getSuccessColor(theme.brightness == Brightness.light)
-                .withValues(alpha: 0.1),
+                .withOpacity(0.1),
             shape: BoxShape.circle,
           ),
           child: CustomIconWidget(
@@ -88,7 +88,7 @@ class _RatingDialogWidgetState extends State<RatingDialogWidget> {
         Text(
           'Xizmatimizni baholang va fikr-mulohazangizni qoldiring',
           style: theme.textTheme.bodyMedium?.copyWith(
-            color: colorScheme.onSurface.withValues(alpha: 0.7),
+            color: colorScheme.onSurface.withOpacity(0.7),
           ),
           textAlign: TextAlign.center,
         ),
@@ -169,7 +169,7 @@ class _RatingDialogWidgetState extends State<RatingDialogWidget> {
           decoration: InputDecoration(
             hintText: 'Xizmat haqida fikringizni yozing...',
             hintStyle: theme.textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.5),
+              color: colorScheme.onSurface.withOpacity(0.5),
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
@@ -207,7 +207,7 @@ class _RatingDialogWidgetState extends State<RatingDialogWidget> {
               }
             },
             style: OutlinedButton.styleFrom(
-              foregroundColor: colorScheme.onSurface.withValues(alpha: 0.7),
+              foregroundColor: colorScheme.onSurface.withOpacity(0.7),
               side: BorderSide(color: colorScheme.outline),
               padding: EdgeInsets.symmetric(vertical: 3.h),
               shape: RoundedRectangleBorder(

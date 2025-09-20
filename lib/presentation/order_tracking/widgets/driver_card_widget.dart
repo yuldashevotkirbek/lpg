@@ -27,7 +27,7 @@ class DriverCardWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+          color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -92,7 +92,7 @@ class DriverCardWidget extends StatelessWidget {
           fit: BoxFit.cover,
         )
             : Container(
-          color: colorScheme.primary.withValues(alpha: 0.1),
+          color: colorScheme.primary.withOpacity(0.1),
           child: CustomIconWidget(
             iconName: 'person',
             color: colorScheme.primary,
@@ -137,7 +137,7 @@ class DriverCardWidget extends StatelessWidget {
             Text(
               '(${driverInfo['totalTrips'] ?? 150} safar)',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: colorScheme.onSurface.withValues(alpha: 0.6),
+                color: colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
           ],
@@ -147,7 +147,7 @@ class DriverCardWidget extends StatelessWidget {
           Text(
             driverInfo['phone'] as String,
             style: theme.textTheme.bodySmall?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.7),
+              color: colorScheme.onSurface.withOpacity(0.7),
             ),
           ),
         ],
@@ -188,9 +188,9 @@ class DriverCardWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(3.w),
       decoration: BoxDecoration(
-        color: colorScheme.primary.withValues(alpha: 0.05),
+        color: colorScheme.primary.withOpacity(0.05),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: colorScheme.primary.withValues(alpha: 0.2)),
+        border: Border.all(color: colorScheme.primary.withOpacity(0.2)),
       ),
       child: Row(
         children: [
@@ -207,7 +207,7 @@ class DriverCardWidget extends StatelessWidget {
                 Text(
                   'Transport vositasi',
                   style: theme.textTheme.labelMedium?.copyWith(
-                    color: colorScheme.onSurface.withValues(alpha: 0.6),
+                    color: colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
                 SizedBox(height: 0.5.h),
@@ -229,7 +229,7 @@ class DriverCardWidget extends StatelessWidget {
                 color: _getVehicleColor(driverInfo['vehicleColor'] as String),
                 shape: BoxShape.circle,
                 border: Border.all(
-                    color: colorScheme.outline.withValues(alpha: 0.3)),
+                    color: colorScheme.outline.withOpacity(0.3)),
               ),
             ),
         ],

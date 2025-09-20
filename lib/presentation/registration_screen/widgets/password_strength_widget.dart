@@ -110,7 +110,7 @@ class PasswordStrengthWidget extends StatelessWidget {
         color: AppTheme.lightTheme.colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: AppTheme.lightTheme.colorScheme.outline.withValues(alpha: 0.2),
+          color: AppTheme.lightTheme.colorScheme.outline.withOpacity(0.2),
           width: 1,
         ),
       ),
@@ -123,7 +123,7 @@ class PasswordStrengthWidget extends StatelessWidget {
                 'Parol kuchi: ',
                 style: AppTheme.lightTheme.textTheme.labelMedium?.copyWith(
                   color: AppTheme.lightTheme.colorScheme.onSurface
-                      .withValues(alpha: 0.7),
+                      .withOpacity(0.7),
                 ),
               ),
               Text(
@@ -139,7 +139,7 @@ class PasswordStrengthWidget extends StatelessWidget {
           LinearProgressIndicator(
             value: progress,
             backgroundColor:
-            AppTheme.lightTheme.colorScheme.outline.withValues(alpha: 0.2),
+            AppTheme.lightTheme.colorScheme.outline.withOpacity(0.2),
             valueColor: AlwaysStoppedAnimation<Color>(strengthColor),
             minHeight: 4,
           ),
@@ -148,7 +148,7 @@ class PasswordStrengthWidget extends StatelessWidget {
             'Talablar:',
             style: AppTheme.lightTheme.textTheme.labelMedium?.copyWith(
               color: AppTheme.lightTheme.colorScheme.onSurface
-                  .withValues(alpha: 0.7),
+                  .withOpacity(0.7),
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -174,7 +174,7 @@ class PasswordStrengthWidget extends StatelessWidget {
                         color: isMet
                             ? AppTheme.lightTheme.colorScheme.onSurface
                             : AppTheme.lightTheme.colorScheme.onSurface
-                            .withValues(alpha: 0.6),
+                            .withOpacity(0.6),
                       ),
                     ),
                   ),

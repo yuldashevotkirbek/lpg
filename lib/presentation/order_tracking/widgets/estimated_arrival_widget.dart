@@ -90,14 +90,14 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            colorScheme.primary.withValues(alpha: 0.1),
-            colorScheme.secondary.withValues(alpha: 0.05),
+            colorScheme.primary.withOpacity(0.1),
+            colorScheme.secondary.withOpacity(0.05),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.primary.withValues(alpha: 0.2)),
+        border: Border.all(color: colorScheme.primary.withOpacity(0.2)),
       ),
       child: Column(
         children: [
@@ -131,7 +131,7 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
                     Text(
                       'Taxminiy yetib kelish vaqti',
                       style: theme.textTheme.labelMedium?.copyWith(
-                        color: colorScheme.onSurface.withValues(alpha: 0.7),
+                        color: colorScheme.onSurface.withOpacity(0.7),
                       ),
                     ),
                     SizedBox(height: 0.5.h),
@@ -155,7 +155,7 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-                  color: colorScheme.shadow.withValues(alpha: 0.05),
+                  color: colorScheme.shadow.withOpacity(0.05),
                   blurRadius: 4,
                   offset: const Offset(0, 2),
                 ),
@@ -177,7 +177,7 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
                 Container(
                   width: 1,
                   height: 8.h,
-                  color: colorScheme.outline.withValues(alpha: 0.2),
+                  color: colorScheme.outline.withOpacity(0.2),
                 ),
                 _buildTimeInfo(
                   context,
@@ -210,7 +210,7 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
           Text(
             label,
             style: theme.textTheme.labelSmall?.copyWith(
-              color: colorScheme.onSurface.withValues(alpha: 0.6),
+              color: colorScheme.onSurface.withOpacity(0.6),
             ),
             textAlign: TextAlign.center,
           ),

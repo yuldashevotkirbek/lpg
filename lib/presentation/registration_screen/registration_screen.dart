@@ -487,7 +487,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         style: AppTheme.lightTheme.textTheme.labelMedium
                             ?.copyWith(
                               color: AppTheme.lightTheme.colorScheme.onSurface
-                                  .withValues(alpha: 0.6),
+                                  .withOpacity(0.6),
                             ),
                       ),
                     ],
@@ -496,7 +496,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   LinearProgressIndicator(
                     value: 0.5,
                     backgroundColor: AppTheme.lightTheme.colorScheme.outline
-                        .withValues(alpha: 0.2),
+                        .withOpacity(0.2),
                     valueColor: AlwaysStoppedAnimation<Color>(
                       AppTheme.lightTheme.colorScheme.primary,
                     ),
@@ -607,7 +607,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 ? 'visibility_off'
                                 : 'visibility',
                             color: AppTheme.lightTheme.colorScheme.onSurface
-                                .withValues(alpha: 0.6),
+                                .withOpacity(0.6),
                             size: 20,
                           ),
                         ),
@@ -642,7 +642,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 ? 'visibility_off'
                                 : 'visibility',
                             color: AppTheme.lightTheme.colorScheme.onSurface
-                                .withValues(alpha: 0.6),
+                                .withOpacity(0.6),
                             size: 20,
                           ),
                         ),
@@ -723,18 +723,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: _isFormValid
                     ? AppTheme.lightTheme.colorScheme.primary
-                    : AppTheme.lightTheme.colorScheme.surface.withValues(
-                        alpha: 0.5,
+                    : AppTheme.lightTheme.colorScheme.surface.withOpacity(
+                        0.5,
                       ),
                 foregroundColor: _isFormValid
                     ? Colors.white
-                    : AppTheme.lightTheme.colorScheme.onSurface.withValues(
-                        alpha: 0.4,
+                    : AppTheme.lightTheme.colorScheme.onSurface.withOpacity(
+                        0.4,
                       ),
                 elevation: _isFormValid ? 4 : 0,
                 shadowColor: _isFormValid
-                    ? AppTheme.lightTheme.colorScheme.primary.withValues(
-                        alpha: 0.3,
+                    ? AppTheme.lightTheme.colorScheme.primary.withOpacity(
+                        0.3,
                       )
                     : Colors.transparent,
                 shape: RoundedRectangleBorder(
@@ -750,7 +750,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       color: _isFormValid
                           ? Colors.white
                           : AppTheme.lightTheme.colorScheme.onSurface
-                                .withValues(alpha: 0.4),
+                                .withOpacity(0.4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -759,8 +759,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     iconName: 'arrow_forward',
                     color: _isFormValid
                         ? Colors.white
-                        : AppTheme.lightTheme.colorScheme.onSurface.withValues(
-                            alpha: 0.4,
+                        : AppTheme.lightTheme.colorScheme.onSurface.withOpacity(
+                            0.4,
                           ),
                     size: 20,
                   ),

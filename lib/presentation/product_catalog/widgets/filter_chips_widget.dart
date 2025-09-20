@@ -43,10 +43,10 @@ class FilterChipsWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.5.w),
       decoration: BoxDecoration(
-        color: colorScheme.primary.withValues(alpha: 0.1),
+        color: colorScheme.primary.withOpacity(0.1),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: colorScheme.primary.withValues(alpha: 0.3),
+          color: colorScheme.primary.withOpacity(0.3),
           width: 1,
         ),
       ),

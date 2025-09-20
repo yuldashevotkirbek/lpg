@@ -279,7 +279,7 @@ class _OrderTrackingState extends State<OrderTracking>
         gradient: LinearGradient(
           colors: [
             colorScheme.primary,
-            colorScheme.primary.withValues(alpha: 0.8),
+            colorScheme.primary.withOpacity(0.8),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -287,7 +287,7 @@ class _OrderTrackingState extends State<OrderTracking>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.primary.withValues(alpha: 0.3),
+            color: colorScheme.primary.withOpacity(0.3),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -298,7 +298,7 @@ class _OrderTrackingState extends State<OrderTracking>
           Container(
             padding: EdgeInsets.all(3.w),
             decoration: BoxDecoration(
-              color: colorScheme.onPrimary.withValues(alpha: 0.2),
+              color: colorScheme.onPrimary.withOpacity(0.2),
               borderRadius: BorderRadius.circular(12),
             ),
             child: CustomIconWidget(
@@ -323,7 +323,7 @@ class _OrderTrackingState extends State<OrderTracking>
                 Text(
                   _getStatusText(_orderData['status'] as String),
                   style: theme.textTheme.bodyMedium?.copyWith(
-                    color: colorScheme.onPrimary.withValues(alpha: 0.9),
+                    color: colorScheme.onPrimary.withOpacity(0.9),
                   ),
                 ),
               ],

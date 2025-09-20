@@ -79,7 +79,7 @@ class NewsSection extends StatelessWidget {
       child: Material(
         elevation: 2,
         borderRadius: BorderRadius.circular(12),
-        shadowColor: colorScheme.shadow.withValues(alpha: 0.1),
+        shadowColor: colorScheme.shadow.withOpacity(0.1),
         child: InkWell(
           onTap: () {
             HapticFeedback.lightImpact();
@@ -102,7 +102,7 @@ class NewsSection extends StatelessWidget {
                       borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(12),
                       ),
-                      color: colorScheme.primary.withValues(alpha: 0.1),
+                      color: colorScheme.primary.withOpacity(0.1),
                     ),
                     child: ClipRRect(
                       borderRadius: const BorderRadius.vertical(
@@ -139,8 +139,8 @@ class NewsSection extends StatelessWidget {
                               vertical: 0.5.h,
                             ),
                             decoration: BoxDecoration(
-                              color: colorScheme.secondary.withValues(
-                                alpha: 0.1,
+                              color: colorScheme.secondary.withOpacity(
+                                0.1,
                               ),
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -171,8 +171,8 @@ class NewsSection extends StatelessWidget {
                           children: [
                             CustomIconWidget(
                               iconName: 'schedule',
-                              color: colorScheme.onSurface.withValues(
-                                alpha: 0.6,
+                              color: colorScheme.onSurface.withOpacity(
+                                0.6,
                               ),
                               size: 12,
                             ),
@@ -181,8 +181,8 @@ class NewsSection extends StatelessWidget {
                               child: Text(
                                 newsItem["date"] as String,
                                 style: theme.textTheme.labelSmall?.copyWith(
-                                  color: colorScheme.onSurface.withValues(
-                                    alpha: 0.6,
+                                  color: colorScheme.onSurface.withOpacity(
+                                    0.6,
                                   ),
                                 ),
                                 maxLines: 1,

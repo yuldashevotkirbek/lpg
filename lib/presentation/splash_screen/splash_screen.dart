@@ -215,7 +215,7 @@ class _SplashScreenState extends State<SplashScreen>
             end: Alignment.bottomCenter,
             colors: [
               AppTheme.lightTheme.colorScheme.primary,
-              AppTheme.lightTheme.colorScheme.primary.withValues(alpha: 0.8),
+              AppTheme.lightTheme.colorScheme.primary.withOpacity(0.8),
               AppTheme.lightTheme.colorScheme.primaryContainer,
             ],
           ),
@@ -250,8 +250,8 @@ class _SplashScreenState extends State<SplashScreen>
                                   borderRadius: BorderRadius.circular(4.w),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withValues(
-                                        alpha: 0.2,
+                                      color: Colors.black.withOpacity(
+                                        0.2,
                                       ),
                                       blurRadius: 20,
                                       offset: const Offset(0, 10),
@@ -334,7 +334,7 @@ class _SplashScreenState extends State<SplashScreen>
                                           .lightTheme
                                           .colorScheme
                                           .onPrimary
-                                          .withValues(alpha: 0.9),
+                                          .withOpacity(0.9),
                                       fontSize: 12.sp,
                                     ),
                                 textAlign: TextAlign.center,
@@ -362,7 +362,7 @@ class _SplashScreenState extends State<SplashScreen>
                         style: AppTheme.lightTheme.textTheme.bodyMedium
                             ?.copyWith(
                               color: AppTheme.lightTheme.colorScheme.onPrimary
-                                  .withValues(alpha: 0.8),
+                                  .withOpacity(0.8),
                               fontSize: 11.sp,
                             ),
                         textAlign: TextAlign.center,
@@ -380,7 +380,7 @@ class _SplashScreenState extends State<SplashScreen>
                         height: 0.5.h,
                         decoration: BoxDecoration(
                           color: AppTheme.lightTheme.colorScheme.onPrimary
-                              .withValues(alpha: 0.3),
+                              .withOpacity(0.3),
                           borderRadius: BorderRadius.circular(1.h),
                         ),
                         child: AnimatedBuilder(
@@ -447,8 +447,8 @@ class _SplashScreenState extends State<SplashScreen>
               Text(
                 'Versiya 1.0.0',
                 style: AppTheme.lightTheme.textTheme.bodySmall?.copyWith(
-                  color: AppTheme.lightTheme.colorScheme.onPrimary.withValues(
-                    alpha: 0.6,
+                  color: AppTheme.lightTheme.colorScheme.onPrimary.withOpacity(
+                    0.6,
                   ),
                   fontSize: 9.sp,
                 ),

@@ -27,7 +27,7 @@ class OrderProgressWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.1),
+            color: colorScheme.shadow.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -64,7 +64,7 @@ class OrderProgressWidget extends StatelessWidget {
             Expanded(
               child: LinearProgressIndicator(
                 value: progress,
-                backgroundColor: colorScheme.outline.withValues(alpha: 0.2),
+                backgroundColor: colorScheme.outline.withOpacity(0.2),
                 valueColor: AlwaysStoppedAnimation<Color>(colorScheme.primary),
                 minHeight: 6,
               ),
@@ -107,7 +107,7 @@ class OrderProgressWidget extends StatelessWidget {
         shape: BoxShape.circle,
         color: isCompleted
             ? colorScheme.primary
-            : colorScheme.outline.withValues(alpha: 0.3),
+            : colorScheme.outline.withOpacity(0.3),
         border:
         isActive ? Border.all(color: colorScheme.primary, width: 3) : null,
       ),
@@ -137,11 +137,11 @@ class OrderProgressWidget extends StatelessWidget {
           padding: EdgeInsets.all(3.w),
           decoration: BoxDecoration(
             color: isActive
-                ? colorScheme.primary.withValues(alpha: 0.1)
+                ? colorScheme.primary.withOpacity(0.1)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
             border: isActive
-                ? Border.all(color: colorScheme.primary.withValues(alpha: 0.3))
+                ? Border.all(color: colorScheme.primary.withOpacity(0.3))
                 : null,
           ),
           child: Row(
@@ -153,7 +153,7 @@ class OrderProgressWidget extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: isCompleted
                       ? colorScheme.primary
-                      : colorScheme.outline.withValues(alpha: 0.3),
+                      : colorScheme.outline.withOpacity(0.3),
                 ),
                 child: isCompleted
                     ? CustomIconWidget(
@@ -165,7 +165,7 @@ class OrderProgressWidget extends StatelessWidget {
                   child: Text(
                     '${index + 1}',
                     style: theme.textTheme.labelMedium?.copyWith(
-                      color: colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -191,7 +191,7 @@ class OrderProgressWidget extends StatelessWidget {
                       Text(
                         stage['timestamp'] as String,
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurface.withValues(alpha: 0.6),
+                          color: colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                     ],
@@ -200,7 +200,7 @@ class OrderProgressWidget extends StatelessWidget {
                       Text(
                         stage['description'] as String,
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurface.withValues(alpha: 0.7),
+                          color: colorScheme.onSurface.withOpacity(0.7),
                         ),
                       ),
                     ],

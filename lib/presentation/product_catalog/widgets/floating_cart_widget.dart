@@ -41,7 +41,7 @@ class FloatingCartWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(25),
             boxShadow: [
               BoxShadow(
-                color: colorScheme.primary.withValues(alpha: 0.3),
+                color: colorScheme.primary.withOpacity(0.3),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               ),
@@ -55,7 +55,7 @@ class FloatingCartWidget extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(2.w),
                     decoration: BoxDecoration(
-                      color: colorScheme.onPrimary.withValues(alpha: 0.2),
+                      color: colorScheme.onPrimary.withOpacity(0.2),
                       shape: BoxShape.circle,
                     ),
                     child: CustomIconWidget(
@@ -98,7 +98,7 @@ class FloatingCartWidget extends StatelessWidget {
                   Text(
                     '$itemCount ta mahsulot',
                     style: theme.textTheme.labelMedium?.copyWith(
-                      color: colorScheme.onPrimary.withValues(alpha: 0.8),
+                      color: colorScheme.onPrimary.withOpacity(0.8),
                     ),
                   ),
                   Text(
