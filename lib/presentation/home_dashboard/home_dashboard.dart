@@ -26,64 +26,15 @@ class _HomeDashboardState extends State<HomeDashboard> {
   List<Map<String, dynamic>> _recentOrders = [];
   bool _isLoading = true;
 
-  // Mock data for news and promotions
-  final List<Map<String, dynamic>> _newsItems = [
-    {
-      "id": 1,
-      "title": "Yangi yil aksiyasi - 20% chegirma!",
-      "category": "Aksiya",
-      "date": "19.09.2025",
-      "imageUrl":
-          "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      "id": 2,
-      "title": "Tezkor yetkazib berish xizmati ishga tushdi",
-      "category": "Yangilik",
-      "date": "18.09.2025",
-      "imageUrl":
-          "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      "id": 3,
-      "title": "Yangi mahsulotlar katalogi",
-      "category": "Mahsulot",
-      "date": "17.09.2025",
-      "imageUrl":
-          "https://images.pexels.com/photos/4246119/pexels-photo-4246119.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-  ];
+  // Yangiliklar/aksiyalar – test kontent yo'q, bo'sh ro'yxat
+  final List<Map<String, dynamic>> _newsItems = [];
 
-  // Mock data for product categories
+  // Kategoriyalar – minimal, so'zsiz narx ko'rsatmaymiz (narxlar katalogda)
   final List<Map<String, dynamic>> _productCategories = [
-    {
-      "id": 1,
-      "name": "12kg LPG balon",
-      "startingPrice": "85,000 so'm",
-      "imageUrl":
-          "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=400",
-    },
-    {
-      "id": 2,
-      "name": "27kg LPG balon",
-      "startingPrice": "180,000 so'm",
-      "imageUrl":
-          "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=400",
-    },
-    {
-      "id": 3,
-      "name": "50kg LPG balon",
-      "startingPrice": "320,000 so'm",
-      "imageUrl":
-          "https://images.pexels.com/photos/4246119/pexels-photo-4246119.jpeg?auto=compress&cs=tinysrgb&w=400",
-    },
-    {
-      "id": 4,
-      "name": "Gaz plitasi",
-      "startingPrice": "450,000 so'm",
-      "imageUrl":
-          "https://images.pexels.com/photos/4246118/pexels-photo-4246118.jpeg?auto=compress&cs=tinysrgb&w=400",
-    },
+    {"id": 1, "name": "5 kg balon", "imageUrl": null},
+    {"id": 2, "name": "10 kg balon", "imageUrl": null},
+    {"id": 3, "name": "27 kg balon", "imageUrl": null},
+    {"id": 4, "name": "50 kg balon", "imageUrl": null},
   ];
 
   @override
@@ -218,7 +169,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   // Quick Action Buttons
                   QuickActionButtons(
                     onReorderLast: _handleReorderLast,
-                    onEmergencyGas: _handleEmergencyGas,
                     onScheduleDelivery: _handleScheduleDelivery,
                   ),
 
@@ -348,43 +298,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
     }
   }
 
-  void _handleEmergencyGas() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Row(
-          children: [
-            CustomIconWidget(
-              iconName: 'emergency',
-              color: AppTheme.errorLight,
-              size: 24,
-            ),
-            SizedBox(width: 2.w),
-            Text('Shoshilinch buyurtma'),
-          ],
-        ),
-        content: Text(
-          'Shoshilinch gaz buyurtmasi berasizmi? Bu buyurtma 30 daqiqa ichida yetkaziladi.',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('Bekor qilish'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(context, '/product-catalog');
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.errorLight,
-            ),
-            child: Text('Buyurtma berish'),
-          ),
-        ],
-      ),
-    );
-  }
+  // Shoshilinch gaz funksiyasi talab bo'yicha olib tashlandi
 
   void _handleScheduleDelivery() {
     Navigator.pushNamed(context, '/product-catalog');

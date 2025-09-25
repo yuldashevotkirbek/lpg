@@ -16,14 +16,29 @@ class ProductDetail extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if ((product['image'] as String?)?.isNotEmpty == true)
+                    Image.asset(product['image'] as String,
+                        height: 200, fit: BoxFit.contain),
+                  const SizedBox(height: 12),
                   Text(
                     product['name'] ?? '',
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
-                  const SizedBox(height: 12),
-                  Text('Narx: ${product['price'] ?? ''}'),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   Text('Hajm: ${product['tankSize'] ?? ''} kg'),
+                  const SizedBox(height: 8),
+                  Text('Narx: ${product['price'] ?? ''}'),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton.icon(
+                      icon: const Icon(Icons.shopping_cart_checkout),
+                      label: const Text("Buyurtma berish"),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/order-tracking');
+                      },
+                    ),
+                  )
                 ],
               ),
             ),

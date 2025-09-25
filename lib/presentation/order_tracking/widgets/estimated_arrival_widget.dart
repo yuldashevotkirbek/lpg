@@ -5,12 +5,13 @@ import '../../../core/app_export.dart';
 import '../../../widgets/custom_icon_widget.dart';
 
 class EstimatedArrivalWidget extends StatefulWidget {
-  final DateTime estimatedTime;
+  // Talab bo'yicha vaqt emas, faqat sana ko'rsatiladi
+  final DateTime estimatedDate;
   final String status;
 
   const EstimatedArrivalWidget({
     super.key,
-    required this.estimatedTime,
+    required this.estimatedDate,
     required this.status,
   });
 
@@ -22,14 +23,13 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
     with TickerProviderStateMixin {
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
-  String _timeRemaining = '';
+  String _daysRemaining = '';
 
   @override
   void initState() {
     super.initState();
     _initializeAnimations();
-    _updateTimeRemaining();
-    _startTimer();
+    _updateDaysRemaining();
   }
 
   void _initializeAnimations() {
@@ -48,35 +48,27 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
     _pulseController.repeat(reverse: true);
   }
 
-  void _startTimer() {
-    Future.delayed(const Duration(seconds: 1), () {
-      if (mounted) {
-        _updateTimeRemaining();
-        _startTimer();
+  void _updateDaysRemaining() {
+    final today = DateTime.now();
+    final start = DateTime(today.year, today.month, today.day);
+    final end = DateTime(
+      widget.estimatedDate.year,
+      widget.estimatedDate.month,
+      widget.estimatedDate.day,
+    );
+    final difference = end.difference(start).inDays;
+
+    setState(() {
+      if (difference < 0) {
+        _daysRemaining = 'Kechikdi';
+      } else if (difference == 0) {
+        _daysRemaining = 'Bugun';
+      } else if (difference == 1) {
+        _daysRemaining = 'Ertaga';
+      } else {
+        _daysRemaining = '$difference kun';
       }
     });
-  }
-
-  void _updateTimeRemaining() {
-    final now = DateTime.now();
-    final difference = widget.estimatedTime.difference(now);
-
-    if (difference.isNegative) {
-      setState(() {
-        _timeRemaining = 'Kechikmoqda';
-      });
-    } else {
-      final hours = difference.inHours;
-      final minutes = difference.inMinutes % 60;
-
-      setState(() {
-        if (hours > 0) {
-          _timeRemaining = '${hours}s ${minutes}d';
-        } else {
-          _timeRemaining = '${minutes}d';
-        }
-      });
-    }
   }
 
   @override
@@ -129,14 +121,14 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Taxminiy yetib kelish vaqti',
+                      'Taxminiy yetib kelish kuni',
                       style: theme.textTheme.labelMedium?.copyWith(
                         color: colorScheme.onSurface.withOpacity(0.7),
                       ),
                     ),
                     SizedBox(height: 0.5.h),
                     Text(
-                      _formatTime(widget.estimatedTime),
+                      _formatDate(widget.estimatedDate),
                       style: theme.textTheme.headlineSmall?.copyWith(
                         fontWeight: FontWeight.w700,
                         color: colorScheme.primary,
@@ -166,8 +158,8 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
               children: [
                 _buildTimeInfo(
                   context,
-                  'Qolgan vaqt',
-                  _timeRemaining,
+                  'Qolgan kun',
+                  _daysRemaining,
                   CustomIconWidget(
                     iconName: 'timer',
                     color: colorScheme.secondary,
@@ -228,10 +220,8 @@ class _EstimatedArrivalWidgetState extends State<EstimatedArrivalWidget>
     );
   }
 
-  String _formatTime(DateTime time) {
-    final hour = time.hour.toString().padLeft(2, '0');
-    final minute = time.minute.toString().padLeft(2, '0');
-    return '$hour:$minute';
+  String _formatDate(DateTime date) {
+    return '${date.year}-${date.month.toString().padLeft(2, '0')}-${date.day.toString().padLeft(2, '0')}';
   }
 
   @override

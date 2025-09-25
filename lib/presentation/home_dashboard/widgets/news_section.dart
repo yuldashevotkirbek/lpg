@@ -15,8 +15,25 @@ class NewsSection extends StatelessWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
 
+    // Talab bo'yicha: test kontent qo'ymaymiz, bo'sh bo'lsa yo'riqnoma ko'rsatamiz
     if (newsItems.isEmpty) {
-      return const SizedBox.shrink();
+      return Padding(
+        padding: EdgeInsets.all(4.w),
+        child: Container(
+          padding: EdgeInsets.all(4.w),
+          decoration: BoxDecoration(
+            color: colorScheme.surface,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: colorScheme.outline.withOpacity(0.1)),
+          ),
+          child: Text(
+            "Yangiliklar va aksiyalar bo'limi hozircha bo'sh. assets/content/ ichida news.json va promotions.json fayllarini to'ldirib, shu yerga bog'lash mumkin.",
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: colorScheme.onSurface.withOpacity(0.8),
+            ),
+          ),
+        ),
+      );
     }
 
     return Column(

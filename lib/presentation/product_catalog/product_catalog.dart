@@ -39,95 +39,47 @@ class _ProductCatalogState extends State<ProductCatalog> {
   int _currentPage = 1;
   // final int _itemsPerPage = 10;
 
-  // Mock product data
+  // Product data with 6000 so'm/kg pricing
   final List<Map<String, dynamic>> _allProducts = [
     {
       "id": "1",
       "name": "Propan gaz baloni",
       "tankSize": "5",
-      "price": "85,000 UZS",
-      "priceValue": 85000,
+      "price": "30,000 so'm",
+      "priceValue": 30000,
       "availability": true,
-      "image":
-          "https://images.pexels.com/photos/4254557/pexels-photo-4254557.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "assets/images/balon_5kg.png",
       "category": "Kichik balon",
     },
     {
       "id": "2",
       "name": "Propan gaz baloni",
-      "tankSize": "12",
-      "price": "165,000 UZS",
-      "priceValue": 165000,
+      "tankSize": "10",
+      "price": "60,000 so'm",
+      "priceValue": 60000,
       "availability": true,
-      "image":
-          "https://images.pexels.com/photos/4254557/pexels-photo-4254557.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "assets/images/balon_10kg.png",
       "category": "O'rta balon",
     },
     {
       "id": "3",
       "name": "Propan gaz baloni",
       "tankSize": "27",
-      "price": "285,000 UZS",
-      "priceValue": 285000,
+      "price": "162,000 so'm",
+      "priceValue": 162000,
       "availability": true,
-      "image":
-          "https://images.pexels.com/photos/4254557/pexels-photo-4254557.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "assets/images/balon_27kg.png",
       "category": "Katta balon",
     },
     {
       "id": "4",
       "name": "Propan gaz baloni",
       "tankSize": "50",
-      "price": "425,000 UZS",
-      "priceValue": 425000,
-      "availability": false,
-      "image":
-          "https://images.pexels.com/photos/4254557/pexels-photo-4254557.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "price": "300,000 so'm",
+      "priceValue": 300000,
+      "availability": true,
+      "image": "assets/images/balon_50kg.png",
       "category": "Juda katta balon",
-    },
-    {
-      "id": "5",
-      "name": "Premium propan gaz",
-      "tankSize": "12",
-      "price": "185,000 UZS",
-      "priceValue": 185000,
-      "availability": true,
-      "image":
-          "https://images.pixabay.com/photo/2019/07/02/05/54/tool-4311573_1280.jpg",
-      "category": "Premium",
-    },
-    {
-      "id": "6",
-      "name": "Uy uchun gaz baloni",
-      "tankSize": "27",
-      "price": "295,000 UZS",
-      "priceValue": 295000,
-      "availability": true,
-      "image":
-          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "category": "Uy uchun",
-    },
-    {
-      "id": "7",
-      "name": "Sanoat uchun gaz",
-      "tankSize": "50",
-      "price": "445,000 UZS",
-      "priceValue": 445000,
-      "availability": true,
-      "image":
-          "https://images.pexels.com/photos/4254557/pexels-photo-4254557.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "category": "Sanoat",
-    },
-    {
-      "id": "8",
-      "name": "Ekonom gaz baloni",
-      "tankSize": "5",
-      "price": "75,000 UZS",
-      "priceValue": 75000,
-      "availability": true,
-      "image":
-          "https://images.pixabay.com/photo/2019/07/02/05/54/tool-4311573_1280.jpg",
-      "category": "Ekonom",
     },
   ];
 
