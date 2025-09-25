@@ -315,6 +315,22 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
           ),
           child: Column(
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Taxminiy yetib kelish kuni',
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                  Text(
+                    _formatDateOnly(widget.orderData['estimatedArrival'] as DateTime?),
+                    style: theme.textTheme.titleSmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 1.h),
               _buildSummaryRow(context, 'Mahsulotlar narxi',
                   '${widget.orderData['subtotal'] ?? 0} so\'m'),
               SizedBox(height: 1.h),
@@ -334,6 +350,14 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
         ),
       ],
     );
+  }
+
+  String _formatDateOnly(DateTime? date) {
+    if (date == null) return '-';
+    final d = DateTime(date.year, date.month, date.day);
+    final mm = d.month.toString().padLeft(2, '0');
+    final dd = d.day.toString().padLeft(2, '0');
+    return '${d.year}-$mm-$dd';
   }
 
   Widget _buildSummaryRow(BuildContext context, String label, String value,

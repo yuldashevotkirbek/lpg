@@ -112,7 +112,7 @@ class DeliveryStatusCard extends StatelessWidget {
                       SizedBox(width: 2.w),
                       Expanded(
                         child: Text(
-                          'Taxminiy yetkazish vaqti: ${currentOrder!["estimatedTime"]}',
+                          'Taxminiy yetib kelish kuni: ${currentOrder!['estimatedDate'] ?? '-'}',
                           style: theme.textTheme.bodySmall?.copyWith(
                             color: colorScheme.primary,
                             fontWeight: FontWeight.w500,

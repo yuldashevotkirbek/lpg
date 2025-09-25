@@ -6,13 +6,11 @@ import '../../../core/app_export.dart';
 
 class QuickActionButtons extends StatelessWidget {
   final VoidCallback? onReorderLast;
-  final VoidCallback? onEmergencyGas;
   final VoidCallback? onScheduleDelivery;
 
   const QuickActionButtons({
     super.key,
     this.onReorderLast,
-    this.onEmergencyGas,
     this.onScheduleDelivery,
   });
 
@@ -35,20 +33,6 @@ class QuickActionButtons extends StatelessWidget {
               onTap: () {
                 HapticFeedback.lightImpact();
                 onReorderLast?.call();
-              },
-            ),
-          ),
-          SizedBox(width: 2.w),
-          Expanded(
-            child: _buildActionButton(
-              context: context,
-              title: 'Shoshilinch gaz',
-              icon: 'emergency',
-              backgroundColor: AppTheme.errorLight,
-              textColor: Colors.white,
-              onTap: () {
-                HapticFeedback.mediumImpact();
-                onEmergencyGas?.call();
               },
             ),
           ),

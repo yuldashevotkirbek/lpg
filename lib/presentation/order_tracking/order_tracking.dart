@@ -190,7 +190,7 @@ class _OrderTrackingState extends State<OrderTracking>
                   onExpandMap: _expandMap,
                 ),
               EstimatedArrivalWidget(
-                estimatedTime: _orderData['estimatedArrival'] as DateTime,
+                estimatedDate: DateTime.now().add(const Duration(days: 1)),
                 status: _getStatusText(_orderData['status'] as String),
               ),
               OrderDetailsWidget(orderData: _orderData),
